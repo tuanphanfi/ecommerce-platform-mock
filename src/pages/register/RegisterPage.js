@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import ReactLoading from 'react-loading';
+import serviceCallApi from "../../services/serviceApi";
 
 import { useForm } from "react-hook-form";
 import FromRegister from '../../features/Register/FromRegister'
@@ -9,12 +10,23 @@ const RegisterPage = () => {
   const navigate = useNavigate()
   const [loading, setLoading] = useState(false);
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     setLoading(true)
-    setTimeout(() => {
-      navigate('/')
+    // setTimeout(() => {
+    //   navigate('/')
+    //   setLoading(false)
+    // }, 1000)
+    try {
+      const result = await serviceCallApi("register", "POST", data)
+      console.log("~file: Register.js ~line 20~ result", result)
       setLoading(false)
-    }, 1000)
+      navigate('/login')
+
+    } catch (error) {
+      alert(error.message)
+      setLoading(false)
+
+    }
   }
 
 

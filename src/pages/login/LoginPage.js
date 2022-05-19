@@ -3,18 +3,26 @@ import ReactLoading from 'react-loading';
 import { Link, useNavigate } from "react-router-dom";
 import FormLogin from '../../features/login/FromLogin'
 import serviceCallApi from "../../services/serviceApi";
-
+import { useForm } from "react-hook-form";
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  // const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => {
+  const onSubmit = async data => {
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      navigate('/');
 
-    }, 1000);
+    try {
+      const result = await serviceCallApi("login", "POST", data)
+
+      console.log("~file: Login.js ~line 20~ result", result)
+      console.log("data:", result.data.data)
+      setLoading(false)
+      navigate('/')
+      localStorage.setItem("userInfo", JSON.stringify(result.data.data))
+    } catch (e) {
+      setLoading(false)
+      alert(e.message)
+    }
+
     //after successfully calling API, back to home, and save clients info into LocalStorage
 
     // Using redux toolkit dispatch Action login success => return => localStorage

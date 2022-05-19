@@ -1,0 +1,14 @@
+/* homepage */
+/* navbar */
+/* navbar */
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+h1 {
+    color: pink;
+}
