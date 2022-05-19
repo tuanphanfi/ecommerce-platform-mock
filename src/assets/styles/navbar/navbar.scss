@@ -1,0 +1,84 @@
+@import '../Variables/Variables.scss';
+
+/* navbar */
+/* logo */
+/* navigation */
+/* cart */
+
+/* navbar */
+.navbar {
+    width: 100%;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end !important;
+    -ms-flex-pack: end !important;
+    justify-content: space-around !important;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: $mainWhite;
+
+    color: $mainPink;
+
+
+
+}
+
+/* logo */
+.navbar-logo {
+    width: 20%;
+
+    img {
+        width: 20%;
+    }
+}
+
+/* navigation */
+.navbar ul {
+    display: block;
+    width: 50%;
+    list-style: none;
+    margin: 0 20px 0 0 !important;
+    padding: 10px;
+
+    li {
+        display: inline-block;
+
+        a {
+            font-size: 25px;
+            color: $mainPink;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+
+            &:hover {
+                color: $mainBlack;
+            }
+        }
+
+    }
+
+}
+
+// cart
+.cart {
+    width: 15%;
+    border: 1px solid $mainPink;
+    border-radius: 5px;
+    padding: 5px 20px;
+
+    p {
+        color: $mainPink;
+        margin-left: 5px !important;
+    }
+
+    i {
+        color: $mainPink;
+
+    }
+}

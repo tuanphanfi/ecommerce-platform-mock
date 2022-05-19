@@ -1,0 +1,18 @@
+// src\assets\styles\Variables\Variables.scss
+@import '../../styles/Variables/Variables.scss';
+
+
+
+.homepage-welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: $redColor;
+    }
+
+    button {
+        @include buttonStyle($redColor, 25px);
+    }
+}

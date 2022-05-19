@@ -28,10 +28,23 @@ const HomePage = () => {
   }
 
   return (
-    <div className="homepage">
+    <div className="">
       {/* navbar */}
       <Navbar />
-      <h1>Home Page</h1>
+
+      <div className="container-fluid bg-dark">
+        <h1>testet</h1>
+        <h1>testet</h1>
+        <h1>testet</h1>
+        <h1>testet</h1>
+        <h1>testet</h1>
+      </div>
+
+      <div className="homepage-welcome">
+        <h1>Welcome to the homepage</h1>
+        <button>Click here</button>
+      </div>
+
       {userInfo ? (
         <>
           <h2>{userInfo.name}</h2>
