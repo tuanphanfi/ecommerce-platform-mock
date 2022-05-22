@@ -1,4 +1,15 @@
-// body
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/* variables //place this before every other css's page import. 
+    Coz it gonna share effect to those.
+*/
+
+@import '../Variables/Variables.scss';
+
+// general
+// general
+// general
 body,
 h1,
 h2,
@@ -10,9 +21,18 @@ p {
     margin: 0 !important;
 }
 
-// homepage nav
+body,
+a {
+    font-family: "Kaushan Script", cursive !important;
+}
+
+// customize
+.banner-title {
+    @include bannerTitle();
+}
+
+
+// homepage nav store
 @import '../homePage/homePage.scss';
 @import '../navbar/navbar.scss';
-
-// variables
-@import '../Variables/Variables.scss';
+@import '../store/store.scss';

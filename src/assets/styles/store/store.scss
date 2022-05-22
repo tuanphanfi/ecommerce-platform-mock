@@ -1,0 +1,36 @@
+// @import '../Variables/Variables.scss';
+
+.store {
+    background: $mainGrey
+}
+
+.store-button {
+    button {
+        padding: 10px;
+        margin: 0 10px 0 0;
+        // color: $mainPink;
+        border-radius: 5px;
+    }
+}
+
+.store-searchbox {
+    i {
+        background-color: $mainPink;
+        color: $mainWhite;
+        padding: 10px;
+        font-size: 1.25em;
+    }
+
+    input {
+        height: 100%;
+        width: 30%;
+        border: 1px dotted $mainPink;
+        border-radius: 5px;
+    }
+}
+
+.store-items {
+    div img {
+        width: 100%;
+    }
+}

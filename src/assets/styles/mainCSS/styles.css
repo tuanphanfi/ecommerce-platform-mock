@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+/* variables //place this before every other css's page import. 
+    Coz it gonna share effect to those.
+*/
 body,
 h1,
 h2,
@@ -7,6 +11,16 @@ h5,
 p {
   padding: 0 !important;
   margin: 0 !important;
+}
+
+body,
+a {
+  font-family: "Kaushan Script", cursive !important;
+}
+
+.banner-title {
+  color: #ef7998;
+  font-size: 4rem;
 }
 
 .homepage-welcome {
@@ -106,5 +120,33 @@ p {
 
 .cart i {
   color: #ef7998;
+}
+
+.store {
+  background: #eeeeee;
+}
+
+.store-button button {
+  padding: 10px;
+  margin: 0 10px 0 0;
+  border-radius: 5px;
+}
+
+.store-searchbox i {
+  background-color: #ef7998;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.25em;
+}
+
+.store-searchbox input {
+  height: 100%;
+  width: 30%;
+  border: 1px dotted #ef7998;
+  border-radius: 5px;
+}
+
+.store-items div img {
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */

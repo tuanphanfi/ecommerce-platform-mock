@@ -29,3 +29,9 @@ serif;
     color: $whiteColor;
     font-size: $fontSize;
 }
+
+@mixin bannerTitle {
+    color: $mainPink;
+    font-size: 4rem;
+}
+

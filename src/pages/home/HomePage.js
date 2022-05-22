@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ReactLoading from "react-loading";
 import Navbar from '../../features/navbar/Navbar'
+import Store from '../store/Store'
 
 const HomePage = () => {
   const info = localStorage.getItem("userInfo")
@@ -32,13 +33,15 @@ const HomePage = () => {
       {/* navbar */}
       <Navbar />
 
-      <div className="container-fluid bg-dark">
+      {/* store */}
+      <Store />
+      {/* <div className="container-fluid bg-dark">
         <h1>testet</h1>
         <h1>testet</h1>
         <h1>testet</h1>
         <h1>testet</h1>
         <h1>testet</h1>
-      </div>
+      </div> */}
 
       <div className="homepage-welcome">
         <h1>Welcome to the homepage</h1>

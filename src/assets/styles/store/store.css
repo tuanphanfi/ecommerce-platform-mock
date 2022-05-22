@@ -1,0 +1,22 @@
+.store {
+  background: #eeeeee;
+}
+
+.store-button button {
+  padding: 10px;
+  margin: 0 10px 0 0;
+  border-radius: 5px;
+}
+
+.store-searchbox i {
+  background-color: #ef7998;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.25em;
+}
+
+.store-searchbox input {
+  height: 100%;
+  width: 30%;
+}
+/*# sourceMappingURL=store.css.map */
