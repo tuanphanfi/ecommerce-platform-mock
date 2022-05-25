@@ -10,6 +10,7 @@ async function serviceCallApi(endpoint, method, data = null, id = null) {
     url,
     data,
   });
+  console.log("🚀 ~ file: serviceApi.js ~ line 13 ~ serviceCallApi ~ url", url)
   return result;
 }
 export default serviceCallApi;

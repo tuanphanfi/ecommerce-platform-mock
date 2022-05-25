@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import Cart from '../../pages/cart/Cart'
+import Cart from '../../pages/components/cart/Cart'
 
 // import '../../assets/css/styles'
 const Navbar = () => {

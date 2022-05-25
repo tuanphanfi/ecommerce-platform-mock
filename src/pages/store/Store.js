@@ -1,10 +1,30 @@
-import React from 'react';
-
+import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom"
+import serviceCallApi from '../../services/serviceApi'
 const Store = () => {
+
+    const [data, setData] = useState([])
+
+
+    // const test = {endpoint, method, data, id}
+    useEffect(() => {
+        getProducts()
+        console.log("data", data)
+    }, [])
+
+    const getProducts = async () => {
+        let categoryId = 4
+        const response = await serviceCallApi(`products?page=1&limit=10&id=${categoryId}`, 'GET')
+        console.log("🚀 ~ file: Store.js ~ line 17 ~ getProducts ~ response", response.data.data.data)
+        setData(response.data.data.data)
+    }
+
     const mockDb = [
         {
             "id": 1,
+            // "url": "https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg",
             "url": "https://lh3.google.com/u/0/d/15WIoVx98vHJGjUcDz9tbGIhtP0poLf_Q=w1920-h928-iv1",
+
             "name": "Sweet item",
             "price": "5"
         },
@@ -57,6 +77,7 @@ const Store = () => {
             "price": "5"
         },
     ]
+
     return (
         <section id="store" class="store py-4">
             <div className="container-fluid">
@@ -84,17 +105,37 @@ const Store = () => {
 
 
                 <div className="row store-items">
-                    {mockDb.map((item, index) => {
+                    {data.map((item, index) => {
                         return (
+
                             <div className="col-4 my-2 rounded">
-                                <img src={item.url} alt="" />
-                                <div className="product-info d-flex justify-content-between bg-white p-2">
-                                    <p>{item.name}</p>
-                                    <p>${item.price}</p>
-                                </div>
+                                <Link to={`/product/${item.id}/${item.slug}`}>
+                                    <img src={item.avatar} alt="" />
+                                    <div className="product-info d-flex justify-content-between bg-white p-2">
+                                        <p>{item.name}</p>
+                                        <p>${item.price}</p>
+                                    </div>
+                                </Link>
                             </div>
+
                         )
                     })}
+
+                    {/* {mockDb.map((item, index) => {
+                        return (
+
+                            <div className="col-4 my-2 rounded">
+                                <Link to={`/product/${item.id}/${item.slug}`}>
+                                    <img src={item.url} alt="" />
+                                    <div className="product-info d-flex justify-content-between bg-white p-2">
+                                        <p>{item.name}</p>
+                                        <p>${item.price}</p>
+                                    </div>
+                                </Link>
+                            </div>
+
+                        )
+                    })} */}
                 </div>
 
             </div>
