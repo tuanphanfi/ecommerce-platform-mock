@@ -121,7 +121,7 @@ const Store = () => {
                         )
                     })}
 
-                    {/* {mockDb.map((item, index) => {
+                    {mockDb.map((item, index) => {
                         return (
 
                             <div className="col-4 my-2 rounded">
@@ -135,7 +135,7 @@ const Store = () => {
                             </div>
 
                         )
-                    })} */}
+                    })}
                 </div>
 
             </div>
